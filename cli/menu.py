@@ -1,4 +1,11 @@
+import os
+
+def clear_screen():
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 def show_main_menu():
+    clear_screen()
     print("\n"+"="*20)
     print("Cost Manager")
     print("="*20)
@@ -12,6 +19,7 @@ def show_main_menu():
     print("0. Exit")
 
     return input("Select an option:")
+
 
     
     
