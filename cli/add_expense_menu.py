@@ -1,22 +1,7 @@
 import os
 from datetime import date
 from database.database import Connection
-
-DEFAULT_CATEGORIES = [
-    "Food",
-    "Transportation",
-    "Shopping",
-    "Entertainment",
-    "Bills",
-    "Health",
-    "Education",
-    "Rent",
-    "Subscriptions",
-    "Other",
-]
-
-def clear_screen():
-    os.system("cls" if os.name == "nt" else "clear")
+from cli.menu import clear_screen,DEFAULT_CATEGORIES
 
 
 

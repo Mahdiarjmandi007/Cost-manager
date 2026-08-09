@@ -1,7 +1,8 @@
 from database.database import create_tables, insert_default_categories,DEFAULT_CATEGORIES
 from cli.menu import show_main_menu
 from cli.add_expense_menu import add_expense_menu
-
+from cli.delete_expense import delete_expense
+from cli.edit_expense import edit_expense
 def create_database():
     
     create_tables()
@@ -18,13 +19,13 @@ def main ():
                 add_expense_menu()
 
             case "2":
-                print("View Expenses")
+                print('m')
 
             case "3":
-                print("Edit Expense")
+                edit_expense()
 
             case "4":
-                print("Delete Expense")
+                delete_expense()
 
             case "5":
                 print("Reports")
