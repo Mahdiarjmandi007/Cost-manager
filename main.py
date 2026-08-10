@@ -3,6 +3,7 @@ from cli.menu import show_main_menu
 from cli.add_expense_menu import add_expense_menu
 from cli.delete_expense import delete_expense
 from cli.edit_expense import edit_expense
+from cli.view import view_menu
 def create_database():
     
     create_tables()
@@ -19,7 +20,7 @@ def main ():
                 add_expense_menu()
 
             case "2":
-                print('m')
+                view_menu()
 
             case "3":
                 edit_expense()
