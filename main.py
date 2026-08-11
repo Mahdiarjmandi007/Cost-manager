@@ -4,6 +4,7 @@ from cli.add_expense_menu import add_expense_menu
 from cli.delete_expense import delete_expense
 from cli.edit_expense import edit_expense
 from cli.view import view_menu
+from cli.category_menu import category_menu
 def create_database():
     
     create_tables()
@@ -32,7 +33,7 @@ def main ():
                 print("Reports")
 
             case "6":
-                print("Categories")
+                category_menu()
 
             case "0":
                 print("Goodbye!")

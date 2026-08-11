@@ -1,17 +1,22 @@
 import os
+from database.database import Connection
 
-DEFAULT_CATEGORIES = [
-    "Food",
-    "Transportation",
-    "Shopping",
-    "Entertainment",
-    "Bills",
-    "Health",
-    "Education",
-    "Rent",
-    "Subscriptions",
-    "Other",
-]
+def get_categories():
+    connection = Connection()
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT id, name
+        FROM categories
+        ORDER BY id
+    """)
+
+    categories = cursor.fetchall()
+
+    connection.close()
+
+    return categories
+
 
 def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")

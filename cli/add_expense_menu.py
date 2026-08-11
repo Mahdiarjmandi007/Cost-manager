@@ -1,14 +1,15 @@
 import os
 from datetime import date
 from database.database import Connection
-from cli.menu import clear_screen,DEFAULT_CATEGORIES
+from cli.menu import clear_screen,get_categories
 
 
 
 def choice_category():
+    DEFAULT_CATEGORIES=get_categories()
     print("===SELECT CATEGORY===")
     for i in range(len(DEFAULT_CATEGORIES)):
-        print(f"{i+1}. {DEFAULT_CATEGORIES[i]}")
+        print(f"{DEFAULT_CATEGORIES[i][0]}. {DEFAULT_CATEGORIES[i][1]}")
     while(True):
         try:
             choice=int(input("Select Category:"))

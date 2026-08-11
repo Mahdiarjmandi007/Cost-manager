@@ -1,5 +1,5 @@
 from cli.delete_expense import choose_expense
-from cli.menu import clear_screen,DEFAULT_CATEGORIES
+from cli.menu import clear_screen
 from cli.add_expense_menu import get_amount,get_description,choice_category
 from database.database import Connection
 
