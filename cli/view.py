@@ -1,7 +1,10 @@
 from database.database import Connection
+from cli.menu import clear_screen
+
 def view_menu():
     connection = Connection()
     cursor = connection.cursor()
+    clear_screen()
     print("\n========== Select Expense ==========") 
     print("1. Last 10 expenses") 
     print("2. Last 15 expenses") 

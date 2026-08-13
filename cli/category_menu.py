@@ -1,16 +1,19 @@
 from cli.menu import get_categories,clear_screen
 from database.database import Connection
 import sqlite3
+from cli.menu import clear_screen
+
 def category_menu():
     while(True):
+        clear_screen()
         print("========== Category Menu ==========\n")
         print("1. Add Category")
         print("2. View Categories")
         print("0. Back")
-        choose=input("choose an option")
+        choose=input("choose an option: ")
         match choose:
             case "1":
-                input_category=input("Enter Category Name:").strip()
+                input_category=input("Enter Category Name: ").strip()
                 if not input_category: 
                     print("Category name cannot be empty.") 
                     input("Press Enter to continue") 

@@ -5,6 +5,7 @@ from cli.delete_expense import delete_expense
 from cli.edit_expense import edit_expense
 from cli.view import view_menu
 from cli.category_menu import category_menu
+from analysis.menu import analysis_menu
 def create_database():
     
     create_tables()
@@ -30,7 +31,7 @@ def main ():
                 delete_expense()
 
             case "5":
-                print("Reports")
+                analysis_menu()
 
             case "6":
                 category_menu()

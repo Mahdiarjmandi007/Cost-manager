@@ -23,7 +23,6 @@ def clear_screen():
 
 
 def show_main_menu():
-    clear_screen()
     print("\n"+"="*20)
     print("Cost Manager")
     print("="*20)
@@ -32,11 +31,11 @@ def show_main_menu():
     print("2. View Expenses")
     print("3. Edit Expense")
     print("4. Delete Expense")
-    print("5. Reports")
+    print("5. analysis")
     print("6. Categories")
     print("0. Exit")
 
-    return input("Select an option:")
+    return input("Select an option: ")
 
 
     
