@@ -7,16 +7,17 @@ from cli.menu import clear_screen,get_categories
 
 def choice_category():
     DEFAULT_CATEGORIES=get_categories()
+    rang=len(DEFAULT_CATEGORIES)
     clear_screen()
     print("===SELECT CATEGORY===")
-    for i in range(len(DEFAULT_CATEGORIES)):
+    for i in range(rang):
         print(f"{DEFAULT_CATEGORIES[i][0]}. {DEFAULT_CATEGORIES[i][1]}")
     while(True):
         try:
             choice=int(input("Select Category:"))
-            if choice >=1 and choice<len(DEFAULT_CATEGORIES):
+            if 1 <= choice <= rang:
                 break
-            print("Please enter a number between 1 and 10.")
+            print(f"Please enter a number between 1 or {rang}.")
         except ValueError:
             print("Please enter a valid number.")
     return choice

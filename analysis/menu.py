@@ -1,4 +1,4 @@
-from analysis.reports import monthly
+from analysis.reports import monthly,yearly,by_category
 from cli.menu import clear_screen
 def analysis_menu():
     clear_screen()
@@ -6,11 +6,11 @@ def analysis_menu():
     print("1. Monthly Report")
     print("2. Yearly Report")
     print("3. Category Analysis")
-    print("4. Overall Statistics")
     print("0. Back\n")
     while(True):
-        choice=int(input("Enter an option: "))
+        
         try:
+            choice=int(input("Enter an option: "))
             if choice in [0,1,2,3,4]:
                 break
             else:
@@ -18,9 +18,14 @@ def analysis_menu():
             
         except ValueError:
             print("please enter a number ")
+
     match choice:
         case 1:
             monthly()
+        case 2:
+            yearly()
+        case 3:
+            by_category()
         case 0:
             return
 
